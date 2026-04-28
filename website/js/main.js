@@ -14,6 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navLinksContainer = document.querySelector('.nav-links');
+  if (mobileMenuBtn && navLinksContainer) {
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('active');
+    });
+  }
+
   // Example: Populate programs if we are on services page
   const programsList = document.getElementById('programs-list');
   if (programsList) {
