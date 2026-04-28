@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register - Yozzie Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "secondary-container": "#e2241f",
+                        "on-surface-variant": "#4c4546",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#000000",
+                        "outline-variant": "#cfc4c5",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-primary-container": "#848484",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-container": "#a18000",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#ffe08b",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#bc000a",
+                        "tertiary-container": "#241a00",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#c6c6c6",
+                        "on-background": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "outline": "#7e7576",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#930005",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#474747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "32px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "border-thick": "3px",
+                        "lg": "64px",
+                        "xl": "128px",
+                        "border-thin": "1px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "h3": ["32px", { "lineHeight": "1.2", "letterSpacing": "0em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-surface-bright text-on-surface min-h-screen flex flex-col font-body-md">
+<!-- Minimal Transactional Header (Main Nav Suppressed per guidelines) -->
+<header class="w-full border-b-[3px] border-primary bg-surface-container-lowest px-6 py-4 flex justify-center items-center sticky top-0 z-50">
+<a class="font-h3 text-h3 italic font-black tracking-tighter text-primary uppercase" href="#">YOZZIE ACADEMY</a>
+</header>
+<!-- Main Registration Content -->
+<main class="flex-grow w-full max-w-[1440px] mx-auto px-6 py-12 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start relative overflow-hidden">
+<!-- Background Grid Pattern -->
+<div class="absolute inset-0 pointer-events-none opacity-20" style="background-image: radial-gradient(#000 2px, transparent 2px); background-size: 32px 32px;"></div>
+<!-- Left Column: Brand Context -->
+<div class="lg:col-span-5 flex flex-col gap-8 relative z-10">
+<h1 class="font-h1 text-h1 text-primary uppercase">
+                RETHINK <br/>
+<span class="bg-secondary text-on-secondary px-4 pb-2 -ml-2 inline-block shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] border-[3px] border-primary transform -rotate-2">EVERYTHING.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                Standard curriculum is obsolete. We are building the next generation of unapologetic creators, builders, and thinkers. Enter the chaos.
+            </p>
+<!-- Decorative Image / Mascot Stand-in -->
+<div class="mt-8 relative w-full max-w-[400px]">
+<div class="absolute inset-0 bg-tertiary-fixed-dim border-[3px] border-primary translate-x-4 translate-y-4"></div>
+<img alt="Yozzie Vibe" class="relative z-10 w-full h-[300px] object-cover border-[3px] border-primary grayscale contrast-125" data-alt="vibrant abstract geometric shapes and bold graffiti-style textures in high contrast neo-brutalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCEBFi-17QkdhDQCesDQT_D8-i21qY92Xe2TpgRvy76CKnPbz6gR13ApJxisJtvFtAiZqJx8kGNiQtw717S0Io-c5vC3xS9fMrXWSme_TtvjUoycSEK5doQBLQeQUP-DZO-UPj4cT8lebQFECCpiHneY8SQ-BzAdJl3ejqWwXB6_-vNudeZVDW0Uht3M-oVm1njLENKVg317jpiOJuZhC1vGzehHqGFZhh7mWjvY0gE3gMQrQp78Bp2RS-ka_QhIhOdM1obVU8AlWz"/>
+<!-- "Sticker" element -->
+<div class="absolute -top-6 -right-6 z-20 bg-surface-container-lowest border-[3px] border-primary p-4 rounded-full shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-12">
+<span class="material-symbols-outlined text-4xl text-secondary">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- Right Column: The Brutalist Form -->
+<div class="lg:col-span-7 relative z-10">
+<div class="bg-surface-container-lowest border-[3px] border-primary p-6 md:p-12 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative">
+<!-- Form Tag / Label -->
+<div class="absolute -top-5 left-8 bg-tertiary-fixed-dim border-[3px] border-primary px-6 py-2 font-label-caps text-label-caps uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    New Student Intake
+                </div>
+<h2 class="font-h2 text-h2 text-primary uppercase mt-4 mb-8 border-b-[3px] border-primary pb-4">Create Account</h2>
+<form class="space-y-6">
+<!-- Account Type Selection -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary uppercase block">I am registering as:</label>
+<div class="grid grid-cols-2 gap-4">
+<label class="relative cursor-pointer">
+<input checked="" class="peer sr-only" name="account_type" type="radio" value="student"/>
+<div class="w-full border-[3px] border-primary bg-surface-bright p-4 text-center font-body-lg text-body-lg text-on-surface-variant transition-all peer-checked:bg-primary peer-checked:text-on-primary peer-checked:shadow-[4px_4px_0px_0px_#f1c100]">
+                                    Student
+                                </div>
+</label>
+<label class="relative cursor-pointer">
+<input class="peer sr-only" name="account_type" type="radio" value="parent"/>
+<div class="w-full border-[3px] border-primary bg-surface-bright p-4 text-center font-body-lg text-body-lg text-on-surface-variant transition-all peer-checked:bg-primary peer-checked:text-on-primary peer-checked:shadow-[4px_4px_0px_0px_#f1c100]">
+                                    Parent / Guardian
+                                </div>
+</label>
+</div>
+</div>
+<!-- Name Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary uppercase block" for="firstName">First Name</label>
+<input class="w-full border-[3px] border-primary bg-surface-bright p-4 font-body-md text-body-md text-primary placeholder-outline focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow" id="firstName" placeholder="Yozzie" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary uppercase block" for="lastName">Last Name</label>
+<input class="w-full border-[3px] border-primary bg-surface-bright p-4 font-body-md text-body-md text-primary placeholder-outline focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow" id="lastName" placeholder="Student" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary uppercase block" for="email">Email Address</label>
+<input class="w-full border-[3px] border-primary bg-surface-bright p-4 font-body-md text-body-md text-primary placeholder-outline focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow" id="email" placeholder="hello@yozzie.academy" type="email"/>
+</div>
+<!-- Password -->
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-primary uppercase block flex justify-between" for="password">
+<span>Password</span>
+</label>
+<input class="w-full border-[3px] border-primary bg-surface-bright p-4 font-body-md text-body-md text-primary placeholder-outline focus:outline-none focus:ring-0 focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow" id="password" placeholder="••••••••" type="password"/>
+<p class="font-body-md text-body-md text-outline text-sm mt-1">Must be at least 8 characters, fiercely secure.</p>
+</div>
+<!-- Terms Checkbox -->
+<div class="flex items-start gap-4 pt-4">
+<div class="flex items-center h-6">
+<input class="w-6 h-6 border-[3px] border-primary bg-surface-bright text-primary focus:ring-0 cursor-pointer appearance-none checked:bg-primary checked:before:content-['✓'] checked:before:text-white checked:before:flex checked:before:justify-center checked:before:items-center" id="terms" type="checkbox"/>
+</div>
+<div class="text-sm">
+<label class="font-body-md text-body-md text-on-surface-variant" for="terms">
+                                I agree to the <a class="text-primary font-bold underline decoration-2 underline-offset-4 hover:bg-tertiary-fixed-dim transition-colors" href="#">Terms of Service</a> and acknowledge the <a class="text-primary font-bold underline decoration-2 underline-offset-4 hover:bg-tertiary-fixed-dim transition-colors" href="#">Privacy Policy</a>. No crying allowed.
+                            </label>
+</div>
+</div>
+<!-- Submit Action -->
+<div class="pt-6">
+<button class="w-full bg-primary text-on-primary font-h3 text-h3 uppercase py-6 border-[3px] border-primary shadow-[8px_8px_0px_0px_#f1c100] hover:bg-zinc-900 active:translate-x-[4px] active:translate-y-[4px] active:shadow-[4px_4px_0px_0px_#f1c100] transition-all flex justify-center items-center gap-4 group" type="button">
+                            JOIN THE ACADEMY
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</button>
+</div>
+<!-- Login Link -->
+<div class="text-center pt-4">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Already enrolled? <a class="text-primary font-bold underline decoration-2 underline-offset-4 hover:bg-tertiary-fixed-dim transition-colors" href="#">Log in here</a>.
+                        </p>
+</div>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer Component (Rendered strictly from JSON) -->
+<footer class="bg-black dark:bg-zinc-950 flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-8 text-white full-width border-t-[3px] border-white">
+<div class="text-2xl font-black text-yellow-400 font-['Space_Grotesk']">YOZZIE ACADEMY</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Careers</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Student Portal</a>
+</nav>
+<div class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-white dark:text-yellow-400">
+            © 2024 YOZZIE ACADEMY. UNAPOLOGETICALLY EXCELLENT.
+        </div>
+</footer>
+</body></html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - Yozzie Academy</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&amp;family=Space+Grotesk:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "secondary-container": "#e2241f",
+                        "on-surface-variant": "#4c4546",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#000000",
+                        "outline-variant": "#cfc4c5",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-primary-container": "#848484",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-container": "#a18000",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#ffe08b",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#bc000a",
+                        "tertiary-container": "#241a00",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#c6c6c6",
+                        "on-background": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "outline": "#7e7576",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#930005",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#474747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "32px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "border-thick": "3px",
+                        "lg": "64px",
+                        "xl": "128px",
+                        "border-thin": "1px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h3": ["32px", {"lineHeight": "1.2", "letterSpacing": "0em", "fontWeight": "700"}],
+                        "h2": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Neo-Brutalist specific utilities */
+        .brutal-border { border: 3px solid #000000; }
+        .brutal-shadow { box-shadow: 6px 6px 0px 0px rgba(0,0,0,1); }
+        .brutal-shadow-gold { box-shadow: 4px 4px 0px 0px #ffe08b; }
+        .brutal-shadow-red { box-shadow: 4px 4px 0px 0px #bc000a; }
+        
+        .brutal-button-active:active {
+            transform: translate(4px, 4px);
+            box-shadow: none !important;
+        }
+        
+        /* Custom List Marker */
+        .list-square {
+            position: relative;
+            padding-left: 24px;
+        }
+        .list-square::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background-color: #000000;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface min-h-screen flex flex-col antialiased selection:bg-tertiary-fixed selection:text-primary">
+<!-- TopNavBar Component -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-6 py-4 bg-white dark:bg-zinc-900 border-b-[3px] border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+<div class="text-3xl font-black italic tracking-tighter text-black dark:text-white">
+            YOZZIE ACADEMY
+        </div>
+<!-- Web Navigation -->
+<div class="hidden md:flex items-center gap-8 font-['Space_Grotesk'] font-bold uppercase tracking-tighter">
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Home</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">About</a>
+<a class="text-black dark:text-white border-b-4 border-yellow-400 pb-1 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Services</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Team</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Contact</a>
+</div>
+<button class="hidden md:block font-['Space_Grotesk'] font-bold uppercase tracking-tighter bg-primary text-on-primary px-6 py-2 border-[3px] border-primary brutal-shadow-gold brutal-button-active transition-all duration-75">
+            Register
+        </button>
+<!-- Mobile Menu Trigger (Visual Only for layout) -->
+<button class="md:hidden text-black dark:text-white">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="w-full max-w-[1440px] mx-auto px-md py-xl md:py-[120px] relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-md items-center">
+<div class="lg:col-span-8 relative z-10">
+<div class="inline-block bg-tertiary-fixed px-xs py-base brutal-border mb-xs">
+<span class="font-label-caps text-label-caps text-primary">CORE CURRICULUM</span>
+</div>
+<h1 class="font-h1 text-h1 text-primary mb-md uppercase">
+                        Mastering English.<br/>
+<span class="text-secondary bg-surface-container-lowest px-2 brutal-border inline-block mt-2 brutal-shadow">No Apologies.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-lg">
+                        Structured chaos meets rigorous academics. We break down the complexities of the English language with aggressive clarity, preparing students not just to pass, but to dominate.
+                    </p>
+</div>
+<!-- Mascot Integration - Positioned to break the grid -->
+<div class="hidden lg:block lg:col-span-4 relative h-full min-h-[400px]">
+<img alt="Gen Z raccoon mascot illustration styled as a bold, thick-outlined sticker overlapping the page edge" class="absolute -right-8 -bottom-16 w-full max-w-[400px] object-contain drop-shadow-[8px_8px_0px_rgba(0,0,0,1)] rotate-[-6deg] z-20" data-alt="Graphic illustration of a cool raccoon character wearing a backwards cap, thick black outlines, stark white background, vector sticker art style, bold pop-art aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72FlDIGVyhfMaAOeGlVUw1DQ7l93crhjUkRlwTb0RoQLvTyHIVEezA4yZreHYCjUdehA125sO_9LU-StBT-AjKCzUrHRAvhVuvVwaJc8rAkKkmfRV6eLsFLdAADKJjxHj7ZDNNi_1i94N-yOsQM8NLs-lqp85CKgBFqOI8pnDpLBPim05Bf3DWACBu1hQ3HkSVY0XV8d3xMrlWjwjfxQzsjQ3Ky92OL1G_xfa0MI4Rtyz1jlgo0spEBq57N32XrhzMgySqnGEbNfj"/>
+</div>
+</div>
+</section>
+<!-- Divider -->
+<div class="w-full border-t-[3px] border-primary"></div>
+<!-- Services Grid Section -->
+<section class="w-full max-w-[1440px] mx-auto px-md py-lg bg-surface-container-lowest">
+<div class="mb-lg flex justify-between items-end border-b-[3px] border-primary pb-sm">
+<h2 class="font-h2 text-h2 text-primary uppercase">Our Programs</h2>
+<span class="material-symbols-outlined text-[48px] text-primary hidden md:block">arrow_downward</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md">
+<!-- Service Card 1 -->
+<div class="bg-surface-bright brutal-border brutal-shadow flex flex-col h-full group transition-transform hover:-translate-y-2 duration-200 relative">
+<!-- Header -->
+<div class="bg-tertiary-fixed border-b-[3px] border-primary p-sm flex items-center justify-between">
+<h3 class="font-label-caps text-label-caps text-primary">FOUNDATION STAGE</h3>
+<span class="material-symbols-outlined text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<!-- Body -->
+<div class="p-md flex-grow flex flex-col">
+<h4 class="font-h3 text-h3 text-primary mb-sm">Primary School English</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">
+                            Building unbreakable foundations. We tackle phonics, grammar, and creative writing with a structured approach that removes the guesswork from early literacy.
+                        </p>
+<ul class="font-body-md text-body-md text-primary space-y-2 mb-md">
+<li class="list-square">Vocabulary Expansion</li>
+<li class="list-square">Sentence Structure Rigor</li>
+<li class="list-square">Creative Expression</li>
+</ul>
+<button class="mt-auto w-full bg-primary text-on-primary font-label-caps text-label-caps py-sm brutal-border brutal-shadow-gold brutal-button-active uppercase">
+                            View Syllabus
+                        </button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-bright brutal-border brutal-shadow flex flex-col h-full group transition-transform hover:-translate-y-2 duration-200">
+<!-- Header -->
+<div class="bg-secondary border-b-[3px] border-primary p-sm flex items-center justify-between">
+<h3 class="font-label-caps text-label-caps text-on-secondary">DEVELOPMENT STAGE</h3>
+<span class="material-symbols-outlined text-on-secondary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<!-- Body -->
+<div class="p-md flex-grow flex flex-col">
+<h4 class="font-h3 text-h3 text-primary mb-sm">Secondary School English</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md flex-grow">
+                            Analytical dominance. Transitioning from simple reading to aggressive textual analysis. We teach students how to deconstruct literature and construct airtight arguments.
+                        </p>
+<ul class="font-body-md text-body-md text-primary space-y-2 mb-md">
+<li class="list-square">Textual Analysis</li>
+<li class="list-square">Persuasive Techniques</li>
+<li class="list-square">Essay Architecture</li>
+</ul>
+<button class="mt-auto w-full bg-primary text-on-primary font-label-caps text-label-caps py-sm brutal-border brutal-shadow-gold brutal-button-active uppercase">
+                            View Syllabus
+                        </button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-primary brutal-border brutal-shadow flex flex-col h-full group transition-transform hover:-translate-y-2 duration-200">
+<!-- Header -->
+<div class="bg-tertiary-fixed border-b-[3px] border-primary p-sm flex items-center justify-between">
+<h3 class="font-label-caps text-label-caps text-primary">ACHIEVEMENT STAGE</h3>
+<span class="material-symbols-outlined text-primary" data-weight="fill" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<!-- Body -->
+<div class="p-md flex-grow flex flex-col text-on-primary">
+<h4 class="font-h3 text-h3 mb-sm text-tertiary-fixed">VCE Exam Prep</h4>
+<p class="font-body-md text-body-md text-surface-dim mb-md flex-grow">
+                            High-stakes execution. Focused exclusively on standardizing perfect responses under extreme time pressure. No fluff, just results-driven methodology.
+                        </p>
+<ul class="font-body-md text-body-md space-y-2 mb-md">
+<li class="list-square before:bg-tertiary-fixed">Timed Essay Drills</li>
+<li class="list-square before:bg-tertiary-fixed">Examiner Rubric Breakdown</li>
+<li class="list-square before:bg-tertiary-fixed">Past Paper Mastery</li>
+</ul>
+<button class="mt-auto w-full bg-tertiary-fixed text-primary font-label-caps text-label-caps py-sm brutal-border brutal-shadow-red brutal-button-active uppercase">
+                            Join Cohort
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology Section (Bento Grid) -->
+<section class="w-full max-w-[1440px] mx-auto px-md py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md auto-rows-min">
+<!-- Big Text Block -->
+<div class="md:col-span-8 bg-surface-container-highest brutal-border p-lg flex flex-col justify-center brutal-shadow">
+<span class="inline-block bg-primary text-on-primary font-label-caps text-label-caps px-2 py-1 self-start mb-sm uppercase brutal-border">The Methodology</span>
+<h2 class="font-h2 text-h2 text-primary uppercase mb-md">We don't teach<br/>to the test.<br/>We break the test.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Our approach is built on honest materials and structured chaos. We discard outdated pedagogies in favor of high-contrast, aggressive clarity in every lesson plan.
+                    </p>
+</div>
+<!-- Image Block -->
+<div class="md:col-span-4 bg-primary brutal-border brutal-shadow h-full min-h-[300px] overflow-hidden relative">
+<img alt="Overhead view of scattered textbooks and notes" class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-luminosity" data-alt="Overhead flatlay of heavily annotated textbooks, thick black sharpie markers, and scattered lined paper on a stark white desk, harsh lighting creating sharp dark shadows, high contrast black and white aesthetic with a single bright red pen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO2pku73IAy4hLbKFKhcRKj_GbLeB6y8fkP3LuPTGH1tvNFZbi75RCtONnK7BEVHG_GnmFdL2Z5ufI_-zOApzDPRm26ZIWXJJz5TgFwha-122l9E0q9jSjwFb6XTSLQ1eeOBEErROmec3tPH6bW0h7apxt0g3D1aqie2wP1WUY876gEAGYpsrON2nWQf35kcAWn-GBx6W3l6Q6nyMy2ZIAzfcaCd0_1pLiGsapi2qVVjJ9UxIsfu-lFmA7Q4xcmTSXD_sXb0KyUBz9"/>
+<div class="absolute inset-0 bg-primary/20"></div>
+</div>
+<!-- Small Stat Block 1 -->
+<div class="md:col-span-4 bg-tertiary-fixed brutal-border p-md flex flex-col justify-between brutal-shadow">
+<span class="material-symbols-outlined text-[40px] text-primary mb-sm">group</span>
+<div>
+<h3 class="font-h1 text-h1 text-primary">1:6</h3>
+<p class="font-label-caps text-label-caps text-primary uppercase mt-1">Strict Ratio</p>
+</div>
+</div>
+<!-- Small Stat Block 2 -->
+<div class="md:col-span-4 bg-secondary brutal-border p-md flex flex-col justify-between brutal-shadow text-on-secondary">
+<span class="material-symbols-outlined text-[40px] mb-sm">trending_up</span>
+<div>
+<h3 class="font-h1 text-h1">98%</h3>
+<p class="font-label-caps text-label-caps uppercase mt-1">ATAR Average</p>
+</div>
+</div>
+<!-- Text Block -->
+<div class="md:col-span-4 bg-surface-bright brutal-border p-md flex flex-col justify-center brutal-shadow">
+<h4 class="font-h3 text-h3 text-primary mb-xs">Unapologetic Excellence.</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Every student is pushed beyond comfortable limits. Perfect alignment with curriculum requirements meets disruptive thinking.
+                    </p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="w-full max-w-[1440px] mx-auto px-md pb-xl">
+<div class="bg-primary brutal-border p-lg md:p-[80px] text-center brutal-shadow relative overflow-hidden">
+<!-- Background grid pattern -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 24px 24px;"></div>
+<div class="relative z-10 flex flex-col items-center">
+<h2 class="font-h2 text-h2 text-on-primary uppercase mb-md max-w-3xl">Ready to dominate your English studies?</h2>
+<p class="font-body-lg text-body-lg text-surface-dim mb-lg max-w-2xl">
+                        Enrollments for the upcoming term are strictly limited to maintain our rigorous standard of education. Secure your spot now.
+                    </p>
+<button class="bg-tertiary-fixed text-primary font-label-caps text-label-caps py-sm px-lg brutal-border brutal-shadow-red brutal-button-active uppercase text-lg tracking-widest">
+                        Apply For Admission
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-8 text-white bg-black dark:bg-zinc-950 full-width border-t-[3px] border-zinc-800">
+<div class="text-2xl font-black text-yellow-400">
+            YOZZIE ACADEMY
+        </div>
+<div class="flex flex-wrap justify-center gap-6 font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest">
+<a class="text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Privacy Policy</a>
+<a class="text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Terms of Service</a>
+<a class="text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Careers</a>
+<a class="text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Student Portal</a>
+</div>
+<div class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-white dark:text-yellow-400 text-center md:text-right">
+            © 2024 YOZZIE ACADEMY. UNAPOLOGETICALLY EXCELLENT.
+        </div>
+</footer>
+</body></html>

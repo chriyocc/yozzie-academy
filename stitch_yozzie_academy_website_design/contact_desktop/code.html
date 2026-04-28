@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - Yozzie Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&amp;family=Space+Grotesk:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "secondary-container": "#e2241f",
+                        "on-surface-variant": "#4c4546",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#000000",
+                        "outline-variant": "#cfc4c5",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-primary-container": "#848484",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-container": "#a18000",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#ffe08b",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#bc000a",
+                        "tertiary-container": "#241a00",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#c6c6c6",
+                        "on-background": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "outline": "#7e7576",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#930005",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#474747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "32px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "border-thick": "3px",
+                        "lg": "64px",
+                        "xl": "128px",
+                        "border-thin": "1px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "h3": ["32px", { "lineHeight": "1.2", "letterSpacing": "0em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1;
+        }
+        /* Grid background pattern */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md bg-grid-pattern min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-6 py-4 bg-white dark:bg-zinc-900 border-b-[3px] border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+<div class="text-3xl font-black italic tracking-tighter text-black dark:text-white">
+            YOZZIE ACADEMY
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Home</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">About</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Services</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Team</a>
+<a class="font-['Space_Grotesk'] font-bold uppercase tracking-tighter text-black dark:text-white border-b-4 border-yellow-400 pb-1 px-2 py-1" href="#">Contact</a>
+</div>
+<button class="hidden md:block bg-black text-white font-['Space_Grotesk'] font-bold uppercase tracking-tighter px-6 py-2 border-[3px] border-black shadow-[4px_4px_0px_0px_#facc15] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all active:translate-x-[2px] active:translate-y-[2px]">
+            Register
+        </button>
+<button class="md:hidden p-2 text-black dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow container mx-auto px-6 py-lg max-w-7xl">
+<!-- Header Section -->
+<div class="mb-lg relative inline-block">
+<h1 class="font-h1 text-h1 text-primary border-[3px] border-black bg-white p-sm shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] uppercase">
+                Holler At Us
+            </h1>
+<!-- Mascot / Accent Element -->
+<div class="absolute -top-sm -right-md w-24 h-24 bg-tertiary-fixed-dim border-[3px] border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center transform rotate-12">
+<span class="material-symbols-outlined text-[48px] text-black">campaign</span>
+</div>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-md items-start">
+<!-- Contact Form Area -->
+<div class="lg:col-span-7 bg-white border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-md relative">
+<div class="border-b-[3px] border-black pb-xs mb-sm">
+<h2 class="font-h2 text-h2 text-primary uppercase">Send a Message</h2>
+</div>
+<form class="space-y-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm">
+<div class="space-y-base">
+<label class="font-label-caps text-label-caps text-on-surface uppercase block">First Name</label>
+<input class="w-full bg-white border-[3px] border-black p-xs font-body-md text-body-md focus:outline-none focus:ring-0 focus:border-black focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow rounded-none" type="text"/>
+</div>
+<div class="space-y-base">
+<label class="font-label-caps text-label-caps text-on-surface uppercase block">Last Name</label>
+<input class="w-full bg-white border-[3px] border-black p-xs font-body-md text-body-md focus:outline-none focus:ring-0 focus:border-black focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow rounded-none" type="text"/>
+</div>
+</div>
+<div class="space-y-base">
+<label class="font-label-caps text-label-caps text-on-surface uppercase block">Email Address</label>
+<input class="w-full bg-white border-[3px] border-black p-xs font-body-md text-body-md focus:outline-none focus:ring-0 focus:border-black focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow rounded-none" type="email"/>
+</div>
+<div class="space-y-base">
+<label class="font-label-caps text-label-caps text-on-surface uppercase block">What's on your mind?</label>
+<textarea class="w-full bg-white border-[3px] border-black p-xs font-body-md text-body-md focus:outline-none focus:ring-0 focus:border-black focus:shadow-[4px_4px_0px_0px_#f1c100] transition-shadow rounded-none resize-none" rows="5"></textarea>
+</div>
+<div class="pt-xs flex justify-end">
+<button class="bg-primary text-white font-label-caps text-label-caps px-md py-sm border-[3px] border-black shadow-[4px_4px_0px_0px_#f1c100] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all rounded-none uppercase flex items-center gap-xs" type="button">
+                            Submit Form
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Info & Location Area -->
+<div class="lg:col-span-5 space-y-md">
+<!-- Direct Contact Info -->
+<div class="bg-tertiary-fixed-dim border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-md">
+<h3 class="font-h3 text-h3 text-primary uppercase mb-sm border-b-[3px] border-black pb-xs">Direct Lines</h3>
+<ul class="space-y-sm">
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-primary mt-1 border-[3px] border-black bg-white p-1">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase">Headquarters</p>
+<p class="font-body-md text-body-md">123 Brutalism Blvd.<br/>Sector 7G, NY 10001</p>
+</div>
+</li>
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-primary mt-1 border-[3px] border-black bg-white p-1">mail</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase">Email</p>
+<p class="font-body-md text-body-md font-bold">loud@yozzie.edu</p>
+</div>
+</li>
+<li class="flex items-start gap-xs">
+<span class="material-symbols-outlined text-primary mt-1 border-[3px] border-black bg-white p-1">phone_in_talk</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase">Phone</p>
+<p class="font-body-md text-body-md font-bold">1-800-YOZZIE</p>
+</div>
+</li>
+</ul>
+</div>
+<!-- Socials -->
+<div class="bg-white border-[3px] border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-md">
+<h3 class="font-h3 text-h3 text-primary uppercase mb-sm border-b-[3px] border-black pb-xs">Stalk Us</h3>
+<div class="flex flex-wrap gap-xs">
+<a class="bg-black text-white p-xs border-[3px] border-black shadow-[4px_4px_0px_0px_#e2241f] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center" href="#">
+<span class="font-label-caps text-label-caps uppercase">Instagram</span>
+</a>
+<a class="bg-black text-white p-xs border-[3px] border-black shadow-[4px_4px_0px_0px_#e2241f] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center" href="#">
+<span class="font-label-caps text-label-caps uppercase">TikTok</span>
+</a>
+<a class="bg-black text-white p-xs border-[3px] border-black shadow-[4px_4px_0px_0px_#e2241f] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] transition-all flex items-center justify-center" href="#">
+<span class="font-label-caps text-label-caps uppercase">Twitter</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shared Component -->
+<footer class="mt-auto bg-black dark:bg-zinc-950 flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-8 text-white border-t-[3px] border-white">
+<div class="text-2xl font-black text-yellow-400">
+            YOZZIE ACADEMY
+        </div>
+<div class="flex flex-wrap gap-6 justify-center">
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Privacy Policy</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Terms of Service</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Careers</a>
+<a class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Student Portal</a>
+</div>
+<div class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400 text-center md:text-right">
+            © 2024 YOZZIE ACADEMY. UNAPOLOGETICALLY EXCELLENT.
+        </div>
+</footer>
+</body></html>

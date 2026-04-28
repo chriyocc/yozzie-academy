@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us - Yozzie Academy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&amp;family=Space+Grotesk:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f9",
+                        "on-surface": "#1a1c1c",
+                        "secondary-container": "#e2241f",
+                        "on-surface-variant": "#4c4546",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#410001",
+                        "primary": "#000000",
+                        "outline-variant": "#cfc4c5",
+                        "primary-fixed": "#e2e2e2",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#584400",
+                        "on-primary-container": "#848484",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#fffbff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-tertiary-container": "#a18000",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-fixed": "#ffe08b",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-tint": "#5e5e5e",
+                        "secondary": "#bc000a",
+                        "tertiary-container": "#241a00",
+                        "error": "#ba1a1a",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#c6c6c6",
+                        "on-background": "#1a1c1c",
+                        "surface-dim": "#dadada",
+                        "outline": "#7e7576",
+                        "tertiary-fixed-dim": "#f1c100",
+                        "background": "#f9f9f9",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#ffdad5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#930005",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed-dim": "#ffb4aa",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#1b1b1b",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-primary-fixed-variant": "#474747"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "32px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "border-thick": "3px",
+                        "lg": "64px",
+                        "xl": "128px",
+                        "border-thin": "1px",
+                        "sm": "16px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Space Grotesk"],
+                        "body-md": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "label-caps": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "h1": ["80px", { "lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0em", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "h3": ["32px", { "lineHeight": "1.2", "letterSpacing": "0em", "fontWeight": "700" }],
+                        "h2": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-image: radial-gradient(circle, #e2e2e2 1px, transparent 1px); background-size: 20px 20px; }
+        .neo-shadow { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+        .neo-shadow-gold { box-shadow: 4px 4px 0px 0px #ffe08b; }
+        .neo-shadow-red { box-shadow: 4px 4px 0px 0px #bc000a; }
+        .neo-shadow-hover:active { transform: translate(4px, 4px); box-shadow: none; }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-6 py-4 bg-white dark:bg-zinc-900 border-b-[3px] border-black dark:border-white shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.2)]">
+<div class="text-3xl font-black italic tracking-tighter text-black dark:text-white uppercase font-['Space_Grotesk']">YOZZIE ACADEMY</div>
+<div class="hidden md:flex gap-8 items-center font-['Space_Grotesk'] font-bold uppercase tracking-tighter">
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Home</a>
+<a class="text-black dark:text-white border-b-4 border-yellow-400 pb-1 px-2 py-1" href="#">About</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Services</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Team</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:bg-yellow-400 hover:text-black transition-all duration-75 px-2 py-1" href="#">Contact</a>
+</div>
+<button class="hidden md:block bg-black text-white font-['Space_Grotesk'] font-bold uppercase tracking-tighter px-6 py-2 border-[3px] border-black neo-shadow-gold neo-shadow-hover active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all">Register</button>
+<button class="md:hidden p-2 text-black border-[3px] border-black neo-shadow"><span class="material-symbols-outlined">menu</span></button>
+</nav>
+<main class="flex-grow w-full max-w-7xl mx-auto px-sm md:px-md py-lg flex flex-col gap-xl">
+<!-- Hero Section -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-0 md:gap-md items-center">
+<div class="md:col-span-7 flex flex-col gap-sm">
+<div class="bg-secondary text-on-secondary font-label-caps text-label-caps px-2 py-1 inline-block w-max border-border-thick border-primary">OUR STORY</div>
+<h1 class="font-h1 text-h1 uppercase">We build <span class="text-secondary bg-tertiary-fixed px-2 inline-block -rotate-2 border-border-thick border-primary neo-shadow">futures</span> not just resumes.</h1>
+<p class="font-body-lg text-body-lg max-w-2xl bg-white p-sm border-border-thick border-primary neo-shadow">Yozzie Academy started with a simple, radical idea: education shouldn't be boring, and it definitely shouldn't be standardized. We are a collective of rogue academics and industry leaders dedicated to teaching the skills that actually matter.</p>
+</div>
+<div class="md:col-span-5 relative mt-md md:mt-0">
+<div class="aspect-square bg-tertiary-fixed border-border-thick border-primary neo-shadow relative overflow-hidden">
+<img alt="Students collaborating in a bright, modern academic space with bold architectural features and vibrant colors." class="w-full h-full object-cover mix-blend-multiply opacity-80" data-alt="Students collaborating in a bright, modern academic space with bold architectural features and vibrant colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrBRTeBayRzpIhpO-h8yQWJdiTlJ9mhvlQPcQxg3v0p5cx3pTnlPZ_SoZtgDjLsMcci0FhO__K0P6lNWb-_9HaQpL-gWW4SaXWP0PnaiJAWgYJk4zafQiOX1I-pGw7yYubp_6ZxfRYLGi1qdNwD5fufZJrK9unlJZDSvpif0ZRzDr3GNecs7axQ8EPvtEgQzc8vtRJNlR0ky-AgJ5J71--L62Bdn4YrN_Z_cWy-6EuhQV-ACVJo6PcsPCWCtakiHFBjp4aAbETvUUD"/>
+</div>
+<!-- Mascot Intrusion -->
+<div class="absolute -bottom-lg -left-md w-48 h-48 bg-white border-border-thick border-primary rounded-full flex items-center justify-center neo-shadow-red z-10 rotate-12">
+<span class="material-symbols-outlined text-[80px]" style="font-variation-settings: 'FILL' 1;">pest_control</span>
+</div>
+</div>
+</section>
+<!-- Mission Statement -->
+<section class="bg-primary text-on-primary p-md md:p-lg border-border-thick border-primary neo-shadow-gold relative">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md relative z-10">
+<div class="md:col-span-1 border-b-[3px] md:border-b-0 md:border-r-[3px] border-white pb-sm md:pb-0 md:pr-sm">
+<h2 class="font-h2 text-h2 uppercase text-tertiary-fixed">The Mission</h2>
+</div>
+<div class="md:col-span-2 flex flex-col gap-sm">
+<p class="font-body-lg text-body-lg">To violently disrupt the stagnant models of traditional learning by injecting practical chaos, real-world stakes, and unapologetic excellence into every curriculum.</p>
+<ul class="flex flex-col gap-base font-body-md text-body-md mt-sm">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary">close</span> No busywork.</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-secondary">close</span> No obsolete theories.</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-tertiary-fixed">done</span> Only what works.</li>
+</ul>
+</div>
+</div>
+<div class="absolute top-4 right-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+</section>
+<!-- Mascot Intro -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-md items-center bg-white p-md border-border-thick border-primary neo-shadow">
+<div class="order-2 md:order-1 flex justify-center">
+<div class="w-64 h-64 bg-surface-container-highest border-border-thick border-primary rounded-full relative neo-shadow flex items-center justify-center overflow-hidden">
+<!-- Placeholder for the Gen Z Raccoon -->
+<img alt="A cheeky, stylized raccoon graphic with sunglasses, looking cool and subversive against a bright yellow background." class="w-full h-full object-cover" data-alt="A cheeky, stylized raccoon graphic with sunglasses, looking cool and subversive against a bright yellow background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhRLlG2_DjD7ReokCF-NrsW37GwN7Aapht1CjMO3F20C7gE3G8-M0eoVjIcYU_j87WpE4_ZufmlJMZrylmQ5KYt7SDvRyCuq3FOLwoMQi0kqqx98-pCB0jdQLhIOfFc_ik2z50_2ztOWpsYfBH8LWX-8NDW_AI7rVxLNXm1dUPAaeS7X9pFEPPgiFvVfLA01mIxEvXhb048GA3sr-H5bCMtvPmzmjCtcKghXdonj1kc5ChxrrYc4Yj4KqX1GU5KzYQVvEHcGC_iFvf"/>
+</div>
+</div>
+<div class="order-1 md:order-2 flex flex-col gap-sm">
+<div class="bg-tertiary-fixed text-on-tertiary-container font-label-caps text-label-caps px-2 py-1 inline-block w-max border-border-thick border-primary">MEET THE MASCOT</div>
+<h2 class="font-h2 text-h2 uppercase">Trash Panda, <br/><span class="text-secondary">Honor Roll.</span></h2>
+<p class="font-body-md text-body-md">Why a raccoon? Because they are resourceful, adaptable, and a little bit chaotic. Just like our students. 'Yozzie' isn't just a mascot; he's a spirit animal for the late-night grinders, the system-hackers, and the relentlessly curious.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-8 text-white bg-black dark:bg-zinc-950 full-width border-t-[3px] border-zinc-800 flat no shadows mt-xl">
+<div class="text-2xl font-black text-yellow-400 font-['Space_Grotesk']">YOZZIE ACADEMY</div>
+<div class="flex flex-wrap gap-4 justify-center font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400">
+<a class="hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Privacy Policy</a>
+<a class="hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Terms of Service</a>
+<a class="hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Careers</a>
+<a class="hover:text-yellow-400 transition-colors underline underline-offset-4 decoration-2" href="#">Student Portal</a>
+</div>
+<div class="font-['Space_Grotesk'] font-medium uppercase text-xs tracking-widest text-zinc-400">
+            © 2024 YOZZIE ACADEMY. UNAPOLOGETICALLY EXCELLENT.
+        </div>
+</footer>
+</body></html>

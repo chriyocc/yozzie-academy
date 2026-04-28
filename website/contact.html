@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Yozzie Academy</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <style>
+    .input-field {
+      width: 100%;
+      padding: var(--spacing-sm);
+      font-family: var(--font-body);
+      font-size: 16px;
+      border: var(--border-thick) solid var(--primary);
+      background-color: var(--surface-container-lowest);
+      transition: all 0.2s;
+    }
+    .input-field:focus {
+      outline: none;
+      box-shadow: 4px 4px 0px 0px var(--tertiary-fixed-dim);
+    }
+    .form-group {
+      margin-bottom: var(--spacing-md);
+    }
+    label {
+      display: block;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--spacing-xs);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar flex justify-between items-center">
+    <div class="nav-logo">YOZZIE ACADEMY</div>
+    <ul class="nav-links">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/team.html">Team</a></li>
+      <li><a href="/contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="container py-xl flex justify-center">
+      <div class="bento-large border-thick p-md bg-surface-lowest neo-shadow-black" style="max-width: 600px; width: 100%;">
+        <div class="mb-md">
+          <h1 class="text-primary" style="font-size: 48px;">Get In Touch.</h1>
+          <div style="width: 64px; height: 3px; background-color: var(--secondary-container); margin-top: 8px;"></div>
+        </div>
+        
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" class="input-field" placeholder="John Doe" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="input-field" placeholder="john@example.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="program">Program of Interest</label>
+            <select id="program" name="program" class="input-field" required>
+              <option value="" disabled selected>Select a program</option>
+              <option value="junior">Junior High Foundations (Years 7-10)</option>
+              <option value="senior">HSC/VCE Exam Prep (Years 11-12)</option>
+              <option value="primary">Creative Writing Bootcamps (Primary)</option>
+              <option value="mentoring">1-on-1 Mentoring</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" class="input-field" rows="4" placeholder="Tell us about your goals..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary neo-shadow-gold" style="width: 100%;">Submit Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="flex justify-between items-center">
+    <div style="font-size: 24px; font-weight: 900; color: var(--tertiary-fixed-dim);">YOZZIE ACADEMY</div>
+    <ul class="flex gap-md" style="list-style: none;">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms of Service</a></li>
+      <li><a href="#">Careers</a></li>
+    </ul>
+    <div style="color: var(--surface-variant);">© 2024 YOZZIE ACADEMY.</div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
