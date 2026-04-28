@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll('.nav-links a');
   navLinks.forEach(link => {
-    if (link.getAttribute('href') === currentPath || (currentPath === '/' && link.getAttribute('href') === '/index.html')) {
+    if (currentPath.endsWith(link.getAttribute('href').replace('./', '')) || (currentPath.endsWith('/') && link.getAttribute('href') === './index.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
